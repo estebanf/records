@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/everteam.records.mobile.css" />
+	<title>everteam.records</title>
+</head>
+
+<body>
+	<div class="screen">
+		<nav>  
+			<div class="header-cell">
+				<img src="icons/icn_home.png">
+			</div>
+			<div class="header-cell">
+				<span>everteam</span>.records
+			</div>
+			<div class="header-cell">
+				<div class="shortcuts noselect"><span></span></div>
+			</div>
+			<div class="header-cell">
+				<div class="avatar"></div>
+			</div>
+		</nav>
+		<div class="shortcuts-menu noselect">
+			<ul>
+				<li cspage="pendingApprovalList.html" class="navigate">Pending approval for destruction</li>
+				<li cspage="retentionRulesReport.html" class="navigate">Retention Rules Records Report</li>
+				<li class="close-menu">Close menu</li>
+			</ul>
+		</div>
+		<div class="avatar-menu noselect">
+			<ul>
+				<li>a.daoud@everteam.com<br/><br/></li>
+				<li cspage="departementList.html" class="navigate"><a>Switch Department</a></li>
+				<li cspage="profile.html" class="navigate"><a>My Profile</a></li>
+				<li><a>Disconnect</a></li>
+				<li class="close-menu"><a>Close menu</a></li>
+			</ul>
+		</div>			
+		
+		<div class="main-container">		
+			<div class="page-cell">
+				<div class="analyticssearch">
+					<h1>Search for anything :</h1>
+					<input type="text" value="Keywords"/><div></div>
+				</div>			
+			</div>
+
+			<div class="page-cell">
+				<div class="main-container-inner">
+					<h1>Or specify your record type :</h1>
+					<div class="record-type-container noselect navigate" cspage="recordTypeSearch.html">
+						<img src="../img/recordType_invoice.png"/>
+						<h2>Invoices</h2>
+					</div>
+					
+					<div class="record-type-container noselect navigate" cspage="recordTypeSearch.html">
+						<img src="../img/recordType_folder.png"/>
+						<h2>Contracts</h2>
+					</div>
+					
+					<div class="record-type-container noselect navigate" cspage="recordTypeSearch.html">
+						<img src="../img/recordType_project.png"/>
+						<h2>Project</h2>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	<script src="../js/jquery-3.0.0.min.js"></script> 
+	<script src="js/everteam.records.mobile.js"></script> 
+</body>
+</html>

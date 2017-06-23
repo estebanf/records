@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.css" />
+	<link rel="stylesheet" type="text/css" href="css/tooltipster.theme.punk.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/everteam.records.css" />
+	<title>everteam.records</title>
+	<script>
+		/*------------------------------------------------------------------*/
+		/*                          LOADER                                  */
+		/*------------------------------------------------------------------*/
+
+		window.onload = function () {
+			var pageWidth = $(window).width();
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				/* Mobile version */
+				if(pageWidth<1027) {
+					window.open("mobile/index.html","_self");
+				} else {
+					window.open("main.html","_self");
+					$('.tooltip').tooltipster({
+						theme: 'tooltipster-punk'
+					});
+				}
+			} else {
+				/* Standard behaviour */
+				$(document).ready(function() {
+					window.open("splash	.html","_self");
+					$('.tooltip').tooltipster({
+						theme: 'tooltipster-punk'
+					});
+				});    
+			}   
+		};
+	</script>
+</head>
+
+<body>
+	<div class="main-loader"><img src="img/loader.gif"></div>
+	<script src="js/jquery-3.0.0.min.js"></script> 
+</body>
+</html>

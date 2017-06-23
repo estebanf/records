@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/everteam.records.mobile.css" />
+	<title>everteam.records</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<!-- Modal Window -->
+	<div class="modal-container">
+		<div class="modal-record-history">
+			<h1>Record history</h1>
+            <br/><br/>
+			<div>
+				<span>Created on:</span><span>04/13/2016</span>
+			</div>
+			<div>
+				<span>By:</span><span>Abdullah Daoud</span>
+			</div>
+			<div>
+				<span>Edited by:</span>
+				<span>
+					Alain Russier - <i>on 07/14/2016</i><br/>
+					Stéphane Serre - <i>on 07/17/2016</i><br/>
+					Sylvestre Besson - <i>on 08/02/2016</i><br/>
+				</span>
+			</div>
+    		<div class="modal-record-buttons">
+    			<input type="button" value="close" class="button-cancel button-close navigate" cspage="resultList.html">
+    		</div>
+		</div>
+		<div class="modal-record-legalHold">
+			<br/><br/><br/>
+			<h1>Place on legal hold</h1>
+			<br/><br/>
+			<div class="dropdown-container">
+				<span>Choose legal hold:</span>
+				<span>
+					<input type="text" value="Elimination after 10 years">
+					<div class="dropdown-icon"></div>
+					<div class="dropdown-menu">
+						<ul>
+							<li>My legal hold</li>
+							<li>Hold for Airbus Project</li>
+							<li>Hold for Audit</li>
+						</ul>
+					</div>
+				</span>
+			</div>
+			<div class="dropdown-container">
+				<span>Reason:</span><span><input type="text" value=""></span>
+			</div>
+    		<div class="modal-record-buttons">
+    			<input type="button" value="Save" class="button-save button-close navigate" cspage="resultList.html">
+    			<input type="button" value="close" class="button-cancel button-close navigate" cspage="resultList.html">
+    		</div>
+		</div>
+		<div class="modal-record-add">
+			<h1>Create a record</h1>
+            <br/><br/>
+			<div>
+				<span>Name:</span><span><input type="text" value=""></span>
+			</div>
+			<div>
+				<span>Description:</span><span><input type="text" value=""></span>
+			</div>
+            <div>
+                <span>Client:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Project:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Date:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Attach file:</span><span><input type="button" value="Browse..."></span>
+            </div>
+
+    		<div class="modal-record-buttons">
+    			<input type="button" value="save" class="button-save button-save navigate" cspage="resultList.html"> 
+    			<input type="button" value="close" class="button-cancel button-close navigate" cspage="resultList.html">
+    		</div>
+		</div>
+	</div>
+	<div class="modal-background navigate" cspage="resultList.html"><span>Close</span></div>
+	
+	<!-- Main screen -->
+	<div class="screen">
+		<nav>  
+			<div class="header-cell">
+				<img src="icons/icn_home.png">
+			</div>
+			<div class="header-cell">
+				<span>everteam</span>.records
+			</div>
+			<div class="header-cell">
+				<div class="shortcuts noselect"><span></span></div>
+			</div>
+			<div class="header-cell">
+				<div class="avatar"></div>
+			</div>
+		</nav>
+		<div class="shortcuts-menu noselect">
+			<ul>
+				<li cspage="pendingApprovalList.html" class="navigate">Pending approval for destruction</li>
+				<li cspage="retentionRulesReport.html" class="navigate">Retention Rules Records Report</li>
+				<li class="close-menu">Close menu</li>
+			</ul>
+		</div>
+		<div class="avatar-menu noselect">
+			<ul>
+				<li>a.daoud@everteam.com<br/><br/></li>
+				<li cspage="departementList.html" class="navigate"><a>Switch Department</a></li>
+				<li cspage="profile.html" class="navigate"><a>My Profile</a></li>
+				<li><a>Disconnect</a></li>
+				<li class="close-menu"><a>Close menu</a></li>
+			</ul>
+		</div>			
+
+		<!-- + button -->
+		<!-- PNG version -->
+		<!--
+		<div class="button-plus-container overlay-charts noselect">
+			<div>
+			</div>
+		</div>
+		-->
+		
+<button class="grid-button collapse" aria-label="Toggle Navigation" role="button" type="button">
+<!--
+<span class="grid"></span>
+-->
+</button>
+		
+		<div class="context-menu-container overlay-menu-container noselect">
+			<div class="result-list-facet result-list-facet-collapsed">
+				<h2>Active filter</h2>
+				<ul class="facet-filters">
+					<li>Record type : Invoices</li>
+					<li>Client : GDF</li>
+				</ul>
+				<h2>Clients</h2>
+				<div>
+					<img src="icons/chart1.png">
+				</div> 
+				<h2>Records per year</h2>
+					<img src="icons/chart2.png">
+				<h2>Records per language</h2>
+					<img src="icons/chart3.png">
+			</div>
+		</div>
+		<div class="context-menu-background overlay-charts-background"></div>
+		
+		<div class="main-container">
+			<div class="main-container-inner result-list-header">
+				<h1>Your search on : Invoices</h1>
+				<div class="header-functions-container">
+					<div class="result-count">2 results</div>
+					<div class="result-pages">1 page</div>
+				</div>
+			</div>
+			<div class="result-list-table result-list-table-expanded">
+				<table cellpadding="2" cellspacing="10" border="0" width="100%">
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Client</th>
+					</tr>
+					<tr>
+						<td>Final estimate</td>
+						<td>GDF validated e...</td>
+						<td>GDF</td>
+					</tr>
+					<tr class="details-row-container">
+						<td colspan="3">
+							<div class="details-row-innercontainer">
+								<div><img src="../img/recordType_invoice.png"></div>
+								<div>
+									<div>
+										<span>Record Type:</span><span>Invoice</span>
+									</div>
+									<div>
+										<span>Name:</span><span>final estimate</span>
+									</div>
+									<div>
+										<span>Description:</span><span>airbus validated estimate for case project</span>
+									</div>
+									<div>
+										<span>Client:</span><span>Airbus</span>
+									</div>
+									<div>
+										<span>Project:</span><span>everteam.case</span>
+									</div>
+								</div>
+								<div><img src="../img/attachedDoc1.png"><img src="../img/attachedDoc2.png"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>final invoice</td>
+						<td>Archive/GDF pro...</td>
+						<td>GDF</td>
+					</tr>
+					<tr class="details-row-container">
+						<td colspan="3">
+							<div class="details-row-innercontainer">
+								<div><img src="../img/recordType_invoice.png"></div>
+								<div>
+									<div>
+										<span>Record Type:</span><span>Invoice</span>
+									</div>
+									<div>
+										<span>Name:</span><span>final invoice</span>
+									</div>
+									<div>
+										<span>Description:</span><span>Archive/GDF project final invoice</span>
+									</div>
+									<div>
+										<span>Client:</span><span>GDF</span>
+									</div>
+									<div>
+										<span>Project:</span><span>everteam.records</span>
+									</div>
+								</div>
+								<div><img src="../img/attachedDoc1.png"></div>
+							</div>
+						</td>
+					</tr>	
+				</table>
+			</div>
+		</div>
+		
+	</div>
+	<script src="../js/jquery-3.0.0.min.js"></script>
+   	<script src="js/everteam.records.mobile.js"></script> 
+	</body>
+</html>

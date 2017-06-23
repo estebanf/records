@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/everteam.records.mobile.css" />
+	<title>everteam.records</title>
+</head>
+
+<body>
+	<!-- Modal Window -->
+	<div class="modal-container">
+		<div class="modal-record-add">
+			<h1>Create a record</h1>
+            <br/><br/>
+			<div>
+				<span>Name:</span><span><input type="text" value=""></span>
+			</div>
+			<div>
+				<span>Description:</span><span><input type="text" value=""></span>
+			</div>
+            <div>
+                <span>Client:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Project:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Date:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Attach file:</span><span><input type="button" value="Browse..."></span>
+            </div>
+
+    		<div class="modal-record-buttons">
+    			<input type="button" value="save" class="button-save button-save navigate" cspage="recordTypeSearch.html"> 
+    			<input type="button" value="close" class="button-cancel button-close navigate" cspage="recordTypeSearch.html">
+    		</div>
+		</div>
+	</div>
+	<div class="modal-background navigate" cspage="recordTypeSearch.html"><span>Close</span></div>
+	
+	<!-- Main screen -->
+	<div class="screen">
+		<nav>  
+			<div class="header-cell">
+				<img src="icons/icn_home.png">
+			</div>
+			<div class="header-cell">
+				<span>everteam</span>.records
+			</div>
+			<div class="header-cell">
+				<div class="shortcuts noselect"><span></span></div>
+			</div>
+			<div class="header-cell">
+				<div class="avatar"></div>
+			</div>
+		</nav>
+		<div class="shortcuts-menu noselect">
+			<ul>
+				<li cspage="pendingApprovalList.html" class="navigate">Pending approval for destruction</li>
+				<li cspage="retentionRulesReport.html" class="navigate">Retention Rules Records Report</li>
+				<li class="close-menu">Close menu</li>
+			</ul>
+		</div>
+		<div class="avatar-menu noselect">
+			<ul>
+				<li>a.daoud@everteam.com<br/><br/></li>
+				<li cspage="departementList.html" class="navigate"><a>Switch Department</a></li>
+				<li cspage="profile.html" class="navigate"><a>My Profile</a></li>
+				<li><a>Disconnect</a></li>
+				<li class="close-menu"><a>Close menu</a></li>
+			</ul>
+		</div>			
+		
+		<div class="main-container">
+			<div class="main-container-inner">
+				<h1>Search on : Invoice</h1>
+				<div class="record-type-search">
+					<div>
+						<span>Client:</span><span><input type="text" value=""></span>
+					</div>
+					<div>
+						<span>Project name:</span><span><input type="text" value=""></span>
+					</div>
+					<div>
+						<span>Date:</span>
+						<span>
+							<input type="text" value="">
+							<div class="input-icon-date"></div>
+						</span>
+					</div>
+					<div>
+						<span class="button-container">
+							<input type="button" value="Search" class="button-record-type navigate" cspage="resultList.html" />
+							<input type="button" value="Back" class="button-cancel navigate" cspage="main.html" />
+						</span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script src="../js/jquery-3.0.0.min.js"></script>
+	<script src="js/everteam.records.mobile.js"></script> 
+	</body>
+</html>

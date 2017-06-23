@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/everteam.records.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.switchButton.css" />
+	<title>everteam.records</title>
+</head>
+
+<body>	
+    <!-- Modal Window -->
+    <div class="modal-container">
+        <div class="modal-retention-rule modal-retention-rule-edit">
+            <h1>Schedule a new job</h1>
+            <div>
+                <span>Name:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Query:</span>
+                <span>
+                    <input type="text" value="Alfresco user list">
+                    <div class="dropdown-icon"></div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li>Alfresco user list</li>
+                            <li>US Invoices</li>
+                            <li>Current projects</li>
+                            <li>User task</li>
+                            <li>Invoices Europe</li>
+                            <li>Weekly Planning</li>
+                            <li>Documents to delete</li>                       
+                        </ul>
+                    </div>
+                </span>
+            </div>
+            <div>
+                <span>Activate:</span><span><input type="checkbox" checkbox=checked></span>
+            </div>
+            <div>
+                <span>Scheduler every:</span>
+                <span>
+                    <input type="text" value="1 day">
+                    <div class="dropdown-icon"></div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li>twice a day</li>
+                            <li>1 day</li>
+                            <li>twice a week</li>
+                            <li>1 week</li>
+                            <li>2 weeks</li>
+                            <li>1 month</li>
+                        </ul>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div>
+            <span class="button-container">
+                <input type="button" value="Create" class="button-record-type navigate" cspage="jobManagement.html" />
+                <input type="button" value="Back" class="button-cancel navigate" cspage="jobManagement.html" />
+            </span>
+        </div>        
+    </div>
+    <div class="modal-background navigate" cspage="jobManagement.html"><span>Close</span></div>
+    
+	<!-- Main screen -->
+	<div class="screen">
+	  <nav>
+	  
+		<div class="toggle">
+			<span>Menu</span>
+			<div>Menu</div>
+		</div>
+		<div class="logo"><span>everteam</span><br/>.governance</div>
+			
+		<!-- Seach for anything -->
+		<div class="analyticssearch">
+			<input type="text" value="Search for anything"/><div></div>
+		</div>
+		
+		<!-- My Profile -->
+		<div class="avatar noselect">
+			<span></span>
+			<div>
+				<b>Abdullah Daoud</b><br/>
+				Human Ressources
+			</div>
+		</div>
+		<div class="avatar-menu noselect">
+			<span></span>
+			<div>Abdullah Daoud</div>
+			<ul class="avatar-menu-main">
+				<li>a.daoud@everteam.com<br/><br/></li>
+				<li class="navigate switch-department-link"><a>Switch Department</a></li>
+				<li cspage="profile.html" class="navigate"><a>My Profile</a></li>
+				<li><a>Disconnect</a></li>
+			</ul>
+			<div class="switch-department">
+				<ul>
+					<li><a href="#">Human Ressources</a></li>
+					<li><a href="#">Marketing</a></li>
+					<li><a href="#">Financial</a></li>
+					<li><a href="#">R&D</a></li>
+					<li><a href="#">Development</a></li>
+					<li><a href="#">Sell</a></li>
+					<li><a href="#">Support</a></li>
+				</ul>
+			</div>
+		</div>
+
+	  </nav>
+	  
+		<!-- Admin Menus -->
+		<div class="cmis-menus-container">
+			<div class="cmis-menus-connections navigate noselect" cspage="cmisConnections.html">CMIS Connections</div>
+			<div class="cmis-menus-jobs-active active navigate noselect" cspage="">Job Management</div>
+			<div class="cmis-menus-query navigate noselect" cspage="queryBuilder.html">Query Builder</div>
+		</div>
+		
+		<!-- + button -->
+		<div class="button-plus-container job-management-create-button noselect">
+			<div>+</div>
+		</div>
+		<div class="context-menu-background"></div>
+	  
+		<div class="menu-container">
+		  <ul class="menu visually-hidden noselect">
+			<li cspage="main.html" class="navigate"><a>Search</a></li>
+			<li><span></span></li>
+			<li cspage="dashboard.html" class="navigate"><a>Dashboard</a></li>
+			<li><span></span></li>
+			<li cspage="cmisConnections.html" class="navigate"><a>CMIS Configuration</a></li>
+			<li><span></span></li>
+			<li cspage="administration.html" class="navigate"><a>Administration</a></li>
+			<li><span></span></li>
+			<li cspage="userConfiguration.html" class="navigate"><a>User configuration</a></li>
+		  </ul>
+		</div>
+		
+		<div class="main-container">
+			<div class="main-container-inner result-list-header">
+				<h1>Scheduled jobs</h1>
+				<!-- <span class="icon-view-facet">Show/Hide facets</span> -->
+				<div class="result-count">8 results</div>
+				<div class="result-pages">1 page</div>
+			</div>
+			<div class="result-list-table result-list-table-expanded destructed-records-table-list">
+				<table cellpadding="2" cellspacing="10" border="0" width="100%" class="job-management">
+					<tr>
+                        <th></th>
+						<th>Job name</th>
+						<th>Frequency</th>
+                        <th></th>
+					</tr>
+					<tr>
+						<td class="cmis-list-icons">
+                            <img src="img/icon_list_edit.png">
+                            <img src="img/icon_list_delete.png">
+                            <img src="img/icon_list_copy.png">
+                        </td>
+						<td>Alfresco contracts import</td>
+						<td>Every monday, 8:00AM</td>
+                        <td><input type="checkbox" checked="checked"></td>
+					</tr>
+					<tr>
+						<td class="cmis-list-icons">
+                            <img src="img/icon_list_edit.png">
+                            <img src="img/icon_list_delete.png">
+                            <img src="img/icon_list_copy.png">
+                        </td>
+						<td>Monthly payslips</td>
+						<td>First monday of the month, 12:00AM</td>
+                        <td><input type="checkbox"></td>
+					</tr>
+                    <tr>
+                        <td class="cmis-list-icons">
+                            <img src="img/icon_list_edit.png">
+                            <img src="img/icon_list_delete.png">
+                            <img src="img/icon_list_copy.png">
+                        </td>
+                        <td>Import team plannings</td>
+                        <td>Everyday, 7:00AM</td>
+                        <td><input type="checkbox" checked="checked"></td>
+                    </tr>
+                    <tr>
+                        <td class="cmis-list-icons">
+                            <img src="img/icon_list_edit.png">
+                            <img src="img/icon_list_delete.png">
+                            <img src="img/icon_list_copy.png">
+                        </td>
+                        <td>External project import</td>
+                        <td>Everyday, 8:00PM</td>
+                        <td><input type="checkbox" checked="checked"></td>
+                    </tr>
+                    <tr>
+                        <td class="cmis-list-icons">
+                            <img src="img/icon_list_edit.png">
+                            <img src="img/icon_list_delete.png">
+                            <img src="img/icon_list_copy.png">
+                        </td>
+                        <td>Import US invoices</td>
+                        <td>Last day of the month, 10:00PM</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="cmis-list-icons">
+                            <img src="img/icon_list_edit.png">
+                            <img src="img/icon_list_delete.png">
+                            <img src="img/icon_list_copy.png">
+                        </td>
+                        <td>Europe invoices import	</td>
+                        <td>Last day of the month, 10:00PM</td>
+                        <td><input type="checkbox" checked="checked"></td>
+                    </tr>
+                    <tr>
+                        <td class="cmis-list-icons">
+                            <img src="img/icon_list_edit.png">
+                            <img src="img/icon_list_delete.png">
+                            <img src="img/icon_list_copy.png">
+                        </td>
+                        <td>Get weekly planning</td>
+                        <td>Every monday, 6:00 AM</td>
+                        <td><input type="checkbox" checked="checked"></td>
+                    </tr>
+                    <tr>
+                        <td class="cmis-list-icons">
+                            <img src="img/icon_list_edit.png">
+                            <img src="img/icon_list_delete.png">
+                            <img src="img/icon_list_copy.png">
+                        </td>
+                        <td>User daily task</td>
+                        <td>Everyday, 7:30AM</td>
+                        <td><input type="checkbox" checked="checked"></td>
+                    </tr>
+				</table>
+			</div>
+			<div class="result-list-facet result-list-facet-collapsed">
+				<h2>Active filter</h2>
+				<ul class="facet-filters">
+					<li>Record type : Invoices</li>
+					<li>Client : GDF</li>
+				</ul>
+				<h2>Clients</h2>
+				<div id="chartContainerClients" style="width: 100%; height: 300px"></div> 
+				<h2>Records per year</h2>
+				<div id="chartContainerProjects" style="width: 100%; height: 300px"></div> 
+				<h2>Records per language</h2>
+				<div id="chartContainerLanguage" style="width: 100%; height: 300px"></div> 
+			</div>
+			<div class="context-menu-tools">
+				<div class="context-menu-icon admin-icon-approve">Approve all</div>
+			</div>
+		</div>
+		
+	</div>
+	<script src="js/jquery-3.0.0.min.js"></script> 
+	<script src="js/jquery-ui.min.js"></script>
+   	<script src="js/tooltipster.bundle.min.js"></script> 
+	<script src="js/everteam.records.js"></script>     
+	<script src="js/jquery.switchButton.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("input[type=checkbox]").switchButton({
+                on_label: 'active',
+                off_label: 'inactive'
+            });
+        });
+    </script>
+	</body>
+</html>

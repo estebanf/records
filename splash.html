@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.css" />
+	<link rel="stylesheet" type="text/css" href="css/tooltipster.theme.punk.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/everteam.records.css" />
+	<style>
+	body {
+		background-image:url('img/background.jpg');
+		background-position:0;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-color: #272727;
+	}
+	@font-face {
+		font-family: 'zona';
+		src: url('fonts/ZonaPro-SemiBold.woff') format('woff');
+		src: url('fonts/ZonaPro-SemiBold.otf');
+		font-weight: normal;
+		font-style: normal;
+	}
+	.main-container {
+		top:0;
+		padding-top:20px;
+	}
+	h1 {
+		color:#54d3c7;
+		font-size:1.5em;
+	}
+	.wcircle-menu-item {
+		border:3px solid #54d3c7;
+		border-radius:50%;
+		padding:15px;
+		width:20px;
+		height:20px;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		-ms-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+	#menu_icon {
+		position: relative;
+		width: 48px;
+		height: 48px;
+		margin: 200px auto;
+		font-size: 1.4em;
+		margin-top: 300px;
+	}
+	.logo {
+		color: #54d3c7;
+		font-size: 1.8em;
+		position: absolute;
+		left: 50%;
+		top: 320px;
+		margin-left: -160px;
+		font-family:'zona',sans serif;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		-ms-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+		opacity:0
+	}
+	.logo span {
+		color:#ffffff;
+	}
+	.wcircle-icon {
+		display:none;
+	}
+	.wcircle-menu div {
+		cursor:pointer;
+	}
+	.wcircle-menu div span {
+		background-repeat:no-repeat;
+		display:inline-block;
+		width:250px;
+		height:68px;
+		position:relative;
+		color:#ffffff;
+		font-size:0.9em;
+		font-family:'zona',sans serif;
+		font-weight:bold;
+		text-align:center;
+		padding-top:50px;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		-ms-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+		background-size:48px 48px;
+		background-position:50% 0;
+		opacity:0.9;
+	}
+
+	.wcircle-menu div:nth-child(1) span {
+		background-image:url("img/iconsplash_ingest.png");
+ 		/*background-image:url("img/iconsplash_search.png");*/
+		left: -40px;
+		top: -32px;
+	}
+	.wcircle-menu div:nth-child(1):hover span {
+		/*background-image:url("img/iconsplash_search_over.png");*/
+		background-image:url("img/iconsplash_ingest.png");
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}
+	.wcircle-menu div:nth-child(2) span {
+		background-image:url("img/iconsplash_security.png");
+		/*background-image:url("img/iconsplash_legalhold.png");*/
+		left: -26px;
+		top: 20px;
+	}
+	.wcircle-menu div:nth-child(2):hover span {
+		background-image:url("img/iconsplash_security.png");
+		/*background-image:url("img/iconsplash_legalhold_over.png");*/
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}
+	.wcircle-menu div:nth-child(3) span {
+		background-image:url("img/iconsplash_search.png");
+		/*background-image:url("img/iconsplash_search.png");*/
+		left: -124px;
+		top: 32px;
+	}
+	.wcircle-menu div:nth-child(3):hover span {
+		background-image:url("img/iconsplash_search_over.png");
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}
+	.wcircle-menu div:nth-child(4) span {
+		background-image:url("img/iconsplash_legalhold.png");
+		/*background-image:url("img/iconsplash_classify.png");*/
+		left: -222px;
+		top: 17px;
+	}
+	.wcircle-menu div:nth-child(5) span {
+		background-image:url("img/iconsplash_retentionrule.png");
+		/*background-image:url("img/iconsplash_connect.png");*/
+		left: -214px;
+		top: -32px;
+	}
+	.wcircle-menu div:nth-child(5):hover span {
+		background-image:url("img/iconsplash_retentionrule_over.png");
+		/*background-image:url("img/iconsplash_connect_over.png");*/
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}
+	.wcircle-menu div:nth-child(6) span {
+		background-image:url("img/iconsplash_database.png");
+		/*background-image:url("img/iconsplash_ingest.png");*/
+		left: -200px;
+		top: -100px;
+	}
+	.wcircle-menu div:nth-child(7) span {
+		background-image:url("img/iconsplash_connect.png");
+		/*background-image:url("img/iconsplash_database.png");*/
+		top: -100px;
+		left: -128px;
+	}
+	.wcircle-menu div:nth-child(7):hover span {
+		background-image:url("img/iconsplash_connect_over.png");
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}
+	.wcircle-menu div:nth-child(8) span {
+		background-image:url("img/iconsplash_search.png");
+		top:-100px;
+		left:-50px;
+	}
+	.wcircle-menu div:nth-child(8):hover span {
+		background-image:url("img/iconsplash_search_over.png");
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}	/*
+	.wcircle-menu div:nth-child(4):hover span {
+		background-image:url("img/iconsplash_classify_over.png");
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}
+	.wcircle-menu div:nth-child(6):hover span {
+		background-image:url("img/iconsplash_ingest_over.png");
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}
+	.wcircle-menu div:nth-child(7):hover span {
+		background-image:url("img/iconsplash_database_over.png");
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}
+	.wcircle-menu div:nth-child(8):hover span {
+		background-image:url("img/iconsplash_security_over.png");
+		opacity:1;
+		color:#54d3c7;
+		font-size:1em;
+	}
+	*/
+	</style>
+	<title>everteam.records</title>
+</head>
+
+<body>
+	<div class="main-container">
+		<div class="main-container-inner">
+			<div class="logo">
+				everteam<span>.governance</span>
+			</div>
+			<div id="menu_icon">
+				<div class="wcircle-icon"></div>
+				<div class="wcircle-menu" style="display:none;">
+					<div class="wcircle-menu-item"><span>Ingest &amp; Classify</span></div>
+					<div class="wcircle-menu-item"><span>Store &amp; Protect</span></div>
+					<div class="wcircle-menu-item"><span>Search &amp; Analyze</span></div>
+					<div class="wcircle-menu-item"><span>Legal Hold</span></div>
+					<div class="wcircle-menu-item"><span>Manage Retention</span></div>
+					<div class="wcircle-menu-item"><span>Verify</span></div>
+					<div class="wcircle-menu-item"><span>Connect</span></div>
+					<div class="wcircle-menu-item"><span>Analyze</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+	<script src="js/jQuery.WCircleMenu.js"></script>
+	<script src="js/everteam.records.js"></script>
+	<script type="text/javascript">
+
+		var animation_startDelay = 50;
+		var animation_duration = 300;
+		var animation_itemInterval = 50;
+
+		$(document).ready(function(){
+			$('#menu_icon').WCircleMenu({
+				width: '50px',
+				height: '50px',
+				angle_start : 0,//-Math.PI/2,
+				delay: animation_itemInterval,
+				distance: 200,
+				angle_interval: Math.PI/4,
+				easingFuncShow:"easeOutBack",
+				easingFuncHide:"easeInBack",
+				step:50,
+				itemRotation:90
+			});
+
+			$( "div.logo" ).delay( animation_startDelay ).animate({
+				opacity: 1
+			}, animation_duration, function() {
+				$('#menu_icon').WCircleMenu('open'); //close
+			});
+
+		});
+
+		$(".wcircle-menu div:nth-child(1)").on("click", function(event) {
+			//Search
+			event.stopPropagation();
+			// window.open("cmisConnections.html","_self");
+			// window.open("main.html","_self");
+		});
+		$(".wcircle-menu div:nth-child(2)").on("click", function(event) {
+			//Legal hold
+			event.stopPropagation();
+			// window.open("legalHold.html","_self");
+		});
+		$(".wcircle-menu div:nth-child(3)").on("click", function(event) {
+			//Retention Rule
+			event.stopPropagation();
+			window.open("http://records.everteam.com/everteam/GetRecords?Template=apps/ihm/templates/frameset.htm&UseFM=yes&AppName=analytics&user_token=5f8747879c28ec2946f21d051527913a2e1da83a01c0840f6fe0fb50ffc5112ced145146968666dc3f0c328011d757cf","_self");
+		});
+		$(".wcircle-menu div:nth-child(4)").on("click", function(event) {
+			//Auto classify
+			event.stopPropagation();
+			window.open("main.html","_self");
+			/*
+			alert("work in progress");
+			*/
+		});
+		$(".wcircle-menu div:nth-child(5)").on("click", function(event) {
+			//CMIS
+			event.stopPropagation();
+			window.open("retentionRules.html","_self");
+		});
+		$(".wcircle-menu div:nth-child(6)").on("click", function(event) {
+			//Ingest
+			event.stopPropagation();
+			window.open("dashboard.html","_self");
+			/*
+			window.open("cmisConnections.html","_self");
+			*/
+		});
+		$(".wcircle-menu div:nth-child(7)").on("click", function(event) {
+			//Store
+			event.stopPropagation();
+			window.open("cmisConnections.html","_self");
+			/*
+			window.open("jobManagement.html","_self");
+			*/
+		});
+		$(".wcircle-menu div:nth-child(8)").on("click", function(event) {
+			//Protect
+			event.stopPropagation();
+			window.open("http://records.everteam.com/everteam/GetRecords?Template=apps/ihm/templates/frameset.htm&UseFM=yes&AppName=analytics&user_token=5f8747879c28ec2946f21d051527913a2e1da83a01c0840f6fe0fb50ffc5112ced145146968666dc3f0c328011d757cf","_self");
+		});
+	</script>
+</body>
+</html>

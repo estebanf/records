@@ -1,0 +1,396 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/everteam.records.css" />
+	<title>everteam.records</title>
+</head>
+
+<body>
+    <!-- Modal Window -->
+    <div class="modal-container">
+        <div class="modal-browser-create-query">
+            <h1>Archive Human ressource repository :</h1>
+            <div class="archive-repository-step1">
+                <h2>Choose a record type from the ones available in this folder:</h2>
+                <span class="checkbox-container browser-query-create-record-type">
+                    <span class="radio radio-on">Invoices</span>
+                    <span class="radio">Estimates</span>
+                    <span class="radio">User Pictures</span>
+                    <span class="radio">Internal documents</span>
+                </span>
+                <div>
+                    <span class="button-container">
+                        <input type="button" value="Next" class="button-record-type browser-create-query-wizard-step1"/>
+                        <input type="button" value="Cancel" class="button-cancel navigate" cspage="browserMain.html" />
+                    </span>
+                </div>
+            </div>
+			<!--
+            <div class="archive-repository-step2">
+                <h2>Choose one or more fields to import to your new record Type:</h2>
+                <span class="checkbox-container browser-query-create-record-type">
+				    <span class="checkbox checkbox check-all">Get all fields</span>
+					<br/>
+                    <span class="checkbox checkbox-on">CMISCustomer</span>
+                    <span class="checkbox">CMISName</span>
+                    <span class="checkbox">CMISDescription</span>
+                    <span class="checkbox">CMISOwner</span>
+                    <span class="checkbox">CMISDetails</span>					
+                    <span class="checkbox">CMISCreationDate</span>
+                    <span class="checkbox">CMISModificationDate</span>
+                    <span class="checkbox">CMISDate</span>
+                </span>
+                <div>
+                    <span class="button-container">
+                        <input type="button" value="Next" class="button-record-type browser-create-query-wizard-step2"/>
+                        <input type="button" value="Cancel" class="button-cancel navigate" cspage="browserMain.html" />
+                    </span>
+                </div>
+            </div>
+			-->
+            <div class="archive-repository-step2">
+                <h2>Select your archiving options:</h2>
+                <span class="checkbox-container browser-query-create-record-type">
+                    <span class="radio radio-on">Archive once</span>                    
+                    <span class="radio">Schedule a job every:</span>
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>12</option>
+					</select>
+					<select>
+						<option>day</option>
+						<option>week</option>
+						<option>month</option>
+						<option>year</option>
+					</select>
+				</span>
+				<br/><br/>
+                <div>
+                    <span class="button-container classname">
+                        <input type="button" value="Next" class="button-record-type browser-create-query-wizard-step2"/>
+                        <input type="button" value="Cancel" class="button-cancel navigate" cspage="browserMain.html" />
+                    </span>
+                </div>
+            </div>
+
+            <div class="archive-repository-step3">
+                <h2>Import your datas :</h2> 
+				<select class="browser-create-query-wizard-step4_1">
+					<option>Choose an existing Record Type</option>
+					<option>Invoices US</option>
+					<option>Invoices</option>
+					<option>Projects EU</option>
+					<option>Contract</option>
+					<option>Marketing</option>
+				</select>
+				&nbsp;or&nbsp;
+                <input type="button" value="Create a new one" class="button-record-type browser-create-query-wizard-step4_2"/>
+				<!--
+				<input type="button" value="Cancel" class="button-cancel navigate" cspage="browserMain.html" />
+				-->
+            </div>
+            
+            <div class="archive-repository-step5_1">
+				<h2>Field mapping with : <b>Invoices</b> Record Type</h2>
+				<span>
+					<ul>
+						<li>You can only map fields of same types (DATE, TEXT...)</li>
+						<li>In dropdown menus, fields will be unselectable if they are too long to be mapped in the chosen record field</li>
+					</ul>
+				</span>
+				<table width="100%" class="table-new-mapping-fields">
+					<tr>
+						<th>Record Type fields</th>
+						<th>Imported data fields</th>
+					</tr>
+					<tr>
+						<td>Client :</td>
+						<td>
+							<select>
+								<option>CMISCustomer</option>
+								<option>CMISName</option>
+								<option>CMISOwner</option>
+								<option>CMISDetails</option>
+								<option disabled>CMISDescription</option>
+								<option disabled>CMISComments</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Project name :</td>
+						<td>
+							<select>
+								<option>CMISCustomer</option>
+								<option>CMISName</option>
+								<option>CMISOwner</option>
+								<option>CMISDetails</option>
+								<option>CMISDescription</option>
+								<option>CMISComments</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Date :</td>
+						<td>
+							<select>
+								<option>CMISCreationDate</option>
+								<option>CMISModificationDate</option>
+								<option>CMISDate</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div>
+								<input type="button" value="Save" class="button-record-type browser-create-query-wizard-step5_1"/>
+								<input type="button" value="Cancel" class="button-cancel navigate" cspage="browserMain.html" />
+							</div>
+						</td>
+					</tr>
+				</table>
+            </div>
+			
+			<div class="archive-repository-step5_2">
+				<h2>Edit your new <span>everteam<span>.records</span></span> record type:</h2>
+				<table width="100%">
+					<tr>
+						<td>
+							<div class="icon-browser-container">
+								<span>Change icon</span>
+							</div>
+						</td>
+						<td>
+							<table width="100%" class="table-new-record-type-fields">
+								<tr>
+									<td>Identifier :</td>
+									<td><span class="readonly">inv_578</span></td>
+								</tr>
+								<tr>
+									<td>Name :</td>
+									<td><span><input type="text" value=""></span></td>
+								</tr>
+								<tr>
+									<td>Short description :</td>
+									<td><span><input type="text" value=""></span></td>
+								</tr>
+								<tr>
+									<td>Retention rule :</td>
+									<td>
+										<span>
+											<select>
+												<option>Elimination after 1 years</option>
+												<option>Elimination after 2 years</option>
+												<option>Elimination after 5 years</option>
+												<option>Elimination after 7 years</option>
+												<option selected>Elimination after 10 years</option>
+												<option>Elimination after 20 years</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>Department :</td>
+									<td>
+										<span>
+											<select>
+												<option>Human Ressource</option>
+												<option>Marketing</option>
+												<option>Sales</option>
+												<option>Financial</option>
+												<option>Support</option>
+												<option>IT</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" align="center">
+										<span class="button-container">
+											<input type="button" value="Save" class="button-record-type browser-create-query-wizard-step5_2"/>
+											<input type="button" value="Cancel" class="button-cancel navigate" cspage="browserMain.html" />
+										</span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+            <div class="archive-repository-step6">
+                <h2>Choose one or more fields to import to your new record Type:</h2>
+                <span class="checkbox-container browser-query-create-record-type">
+				    <span class="checkbox checkbox check-all">Get all fields</span>
+					<br/>
+                    <span class="checkbox checkbox-on">CMISCustomer</span>
+                    <span class="checkbox">CMISName</span>
+                    <span class="checkbox">CMISDescription</span>
+                    <span class="checkbox">CMISOwner</span>
+                    <span class="checkbox">CMISDetails</span>					
+                    <span class="checkbox">CMISCreationDate</span>
+                    <span class="checkbox">CMISModificationDate</span>
+                    <span class="checkbox">CMISDate</span>
+                </span>
+                <div>
+                    <span class="button-container">
+                        <input type="button" value="Next" class="button-record-type browser-create-query-wizard-step6"/>
+                        <input type="button" value="Cancel" class="button-cancel navigate" cspage="browserMain.html" />
+                    </span>
+                </div>
+            </div>
+			
+			<div class="archive-repository-step7" id="archive_repository_step7">
+				<img src="img/loader.gif" />
+			</div>
+            
+        </div>
+    </div>
+    <div class="modal-background navigate" cspage="browserMain.html"><span>Close</span></div>
+    
+	<!-- Main screen -->
+	<div class="screen">
+	  <nav>
+	  
+		<div class="toggle">
+			<span>Menu</span>
+			<div>Menu</div>
+		</div>
+		<div class="logo"><span>everteam</span><br/>.governance</div>
+			
+		<!-- Seach for anything -->
+		<div class="analyticssearch">
+			<input type="text" value="Search for anything"/><div></div>
+		</div>
+		
+		<!-- My Profile -->
+		<div class="avatar noselect">
+			<span></span>
+			<div>
+				<b>Abdullah Daoud</b><br/>
+				Human Ressources
+			</div>
+		</div>
+		<div class="avatar-menu noselect">
+			<span></span>
+			<div>Abdullah Daoud</div>
+			<ul class="avatar-menu-main">
+				<li>a.daoud@everteam.com<br/><br/></li>
+				<li class="navigate switch-department-link"><a>Switch Department</a></li>
+				<li cspage="profile.html" class="navigate"><a>My Profile</a></li>
+				<li><a>Disconnect</a></li>
+			</ul>
+			<div class="switch-department">
+				<ul>
+					<li><a href="#">Human Ressources</a></li>
+					<li><a href="#">Marketing</a></li>
+					<li><a href="#">Financial</a></li>
+					<li><a href="#">R&D</a></li>
+					<li><a href="#">Development</a></li>
+					<li><a href="#">Sell</a></li>
+					<li><a href="#">Support</a></li>
+				</ul>
+			</div>
+		</div>
+
+		
+	  </nav>
+	  
+		<!-- Admin Menus -->
+		<div class="cmis-menus-container">
+			<div class="cmis-menus-connections-active active navigate noselect" cspage="cmisConnections.html">CMIS Connections</div>
+			<div class="cmis-menus-jobs navigate noselect" cspage="jobManagement.html">Job Management</div>
+			<div class="cmis-menus-query navigate noselect" cspage="queryBuilder.html">Query Builder</div>
+		</div>
+		
+		<!-- + button -->
+		<div class="button-plus-container noselect">
+			<div>+</div>
+		</div>
+		<div class="context-menu-container noselect">
+			<ul>
+				<li class="cmis-connection"><span>Add a CMIS connection</span><div></div></li>
+				<li class="retention-rule"><span>Add a retention rule</span><div></div></li>
+				<li class="legal-hold"><span>Create a legal hold</span><div></div></li>
+				<li class="record-type"><span>Create a record type</span><div></div></li>
+				<li class="query-builder"><span>Create a query</span><div></div></li>
+			</ul>
+		</div>
+		<div class="context-menu-background"></div>
+	  
+		<div class="menu-container">
+		  <ul class="menu visually-hidden noselect">
+			<li cspage="main.html" class="navigate"><a>Search</a></li>
+			<li><span></span></li>
+			<li cspage="dashboard.html" class="navigate"><a>Dashboard</a></li>
+			<li><span></span></li>
+			<li cspage="cmisConnections.html" class="navigate"><a>CMIS Configuration</a></li>
+			<li><span></span></li>
+			<li cspage="administration.html" class="navigate"><a>Administration</a></li>
+			<li><span></span></li>
+			<li cspage="userConfiguration.html" class="navigate"><a>User configuration</a></li>
+		  </ul>
+		</div>
+		
+		<div class="main-container browser-main-screen">
+            <h1>Repository browser</h1>
+            <div class="browser-frame-tree-view">
+                <ul>
+                    <li><img src="img/icon_small_folder.png">/
+                        <ul>
+                            <li><img src="img/icon_small_folder.png">Human Ressources</li>
+                            <li><img src="img/icon_small_folder.png">Clients informations</li> 
+                            <li><img src="img/icon_small_folder.png">US invoices</li>
+                            <li><img src="img/icon_small_folder.png">Invoices Europe</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="browser-frame-explorer">
+                <div class="browser-frame-explorer-innercontainer">
+                    <div class="browser-frame-explorer-header">Name</div>
+                    <ul>
+                        <li><img src="img/icon_small_folder.png"><span class="folder-detail-label">Human Ressources</span><span>archive</span></li>
+                        <li><img src="img/icon_small_folder.png"><span class="folder-detail-label">Clients informations</span><span>archive</span></li> 
+                        <li><img src="img/icon_small_folder.png"><span class="folder-detail-label">US invoices</span><span>archive</span></li>
+                        <li><img src="img/icon_small_folder.png"><span class="folder-detail-label">Invoices Europe</span><span>archive</span></li>
+                    </ul>
+                </div>
+                
+                <div class="browser-frame-folder-detail-innercontainer">
+                    <div class="browser-frame-folder-detail-header">Name : Human Ressource<span>Archive</span></div>
+                    <div class="browser-frame-folder-detail-page">
+                        <h2>Properties</h2>
+                        <span>Size: 16.4Mo</span>
+                        <span>Number of files: 37 documents</span>
+                        <h2>Version</h2>
+                        <span>1.2.013</span>
+                        <h2>Record types found</h2>
+                        <span>
+                            <ul>
+                                <li>employment contract</li>
+                                <li>payslip</li>
+                                <li>planning</li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+        </div>
+    </div>
+	<script src="js/jquery-3.0.0.min.js"></script>
+   	<script src="js/tooltipster.bundle.min.js"></script> 
+	<script src="js/everteam.records.js"></script> 
+	</body>
+</html>

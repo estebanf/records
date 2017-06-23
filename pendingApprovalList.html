@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/everteam.records.css" />
+	<title>everteam.records</title>
+</head>
+
+<body>
+	<!-- Main screen -->
+	<div class="screen">
+	  <nav>
+
+		<div class="toggle">
+			<span>Menu</span>
+			<div>Menu</div>
+		</div>
+		<div class="logo"><span>everteam</span><br/>.governance</div>
+
+		<!-- Seach for anything -->
+		<div class="analyticssearch">
+			<input type="text" value="Search for anything"/><div></div>
+		</div>
+
+		<!-- My Profile -->
+		<div class="avatar noselect">
+			<span></span>
+			<div>
+				<b>Abdullah Daoud</b><br/>
+				Human Ressources
+			</div>
+		</div>
+		<div class="avatar-menu noselect">
+			<span></span>
+			<div>Abdullah Daoud</div>
+			<ul class="avatar-menu-main">
+				<li>a.daoud@everteam.com<br/><br/></li>
+				<li class="navigate switch-department-link"><a>Switch Department</a></li>
+				<li cspage="profile.html" class="navigate"><a>My Profile</a></li>
+				<li><a>Disconnect</a></li>
+			</ul>
+			<div class="switch-department">
+				<ul>
+					<li><a href="#">Human Ressources</a></li>
+					<li><a href="#">Marketing</a></li>
+					<li><a href="#">Financial</a></li>
+					<li><a href="#">R&D</a></li>
+					<li><a href="#">Development</a></li>
+					<li><a href="#">Sell</a></li>
+					<li><a href="#">Support</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+	  </nav>
+
+		<!-- My Shortcuts -->
+		<div class="shortcuts noselect"><div>My Shortcuts</div><span></span></div>
+		<div class="shortcuts-menu noselect">
+			<div>My Shortcuts</div><span></span>
+			<ul>
+				<li cspage="pendingApprovalList.html" class="navigate">Pending approval for destruction</li>
+				<li cspage="retentionRulesReport.html" class="navigate">Retention Rules Records Report</li>
+			</ul>
+		</div>
+
+		<!-- + button -->
+		<div class="button-plus-container noselect">
+			<div>+</div>
+		</div>
+		<div class="context-menu-container noselect">
+			<ul>
+				<li class="cmis-connection"><span>Add a CMIS connection</span><div></div></li>
+				<li class="retention-rule"><span>Add a retention rule</span><div></div></li>
+				<li class="legal-hold"><span>Create a legal hold</span><div></div></li>
+				<li class="record-type"><span>Create a record type</span><div></div></li>
+				<li class="query-builder"><span>Create a query</span><div></div></li>
+			</ul>
+		</div>
+		<div class="context-menu-background"></div>
+
+		<div class="menu-container">
+		  <ul class="menu visually-hidden noselect">
+			<li cspage="main.html" class="navigate"><a>Search</a></li>
+			<li><span></span></li>
+			<li cspage="dashboard.html" class="navigate"><a>Dashboard</a></li>
+			<li><span></span></li>
+			<li cspage="cmisConnections.html" class="navigate"><a>CMIS Configuration</a></li>
+			<li><span></span></li>
+			<li cspage="administration.html" class="navigate"><a>Administration</a></li>
+			<li><span></span></li>
+			<li cspage="userConfiguration.html" class="navigate"><a>User configuration</a></li>
+		  </ul>
+		</div>
+
+		<div class="main-container">
+			<div class="main-container-inner result-list-header destructed-records-header">
+				<h1>Pending approval for destruction</h1>
+				<span class="icon-view-facet">Show/Hide facets</span>
+				<div class="destructed-records-header-dropdown">
+					<span>Select time period:</span>
+					<span>
+						<input type="text" value="last 30 days">
+						<div class="dropdown-icon"></div>
+						<div class="dropdown-menu">
+							<ul>
+								<li>last day</li>
+								<li>last week</li>
+								<li>last month</li>
+								<li>last 2 months</li>
+								<li>last 6 months</li>
+								<li>last year</li>
+							</ul>
+						</div>
+					</span>
+				</div>
+				<div class="destructed-records-result-count">6 results</div>
+				<div class="result-pages">1 page</div>
+			</div>
+			<div class="result-list-table result-list-table-expanded destructed-records-table-list">
+				<table cellpadding="2" cellspacing="10" border="0" width="100%">
+					<tr>
+						<th><input type="checkbox"></th>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Record type</th>
+						<th>Deletion date</th>
+                        <th>Action</th>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>First Payment</td>
+						<td>invoice for everteam</td>
+						<td>Invoices</td>
+						<td>08/02/2016 by A. Russier</td>
+                        <td><div class="result-list-icons admin-icon-approve">Approve</div></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>estimate by Intalio</td>
+						<td>Intalio / everteam project</td>
+						<td>Invoices</td>
+						<td>08/01/2016 by S. Serre</td>
+                        <td><div class="result-list-icons admin-icon-approve">Approve</div></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>everteam license </td>
+						<td>2015 final revision</td>
+						<td>Contracts</td>
+						<td>06/21/2016 by A. Daoud</td>
+                        <td><div class="result-list-icons admin-icon-approve">Approve</div></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>Airbus CASE estimate</td>
+						<td>first studies</td>
+						<td>Invoices</td>
+						<td>06/11/2016 by I. Carrio </td>
+                        <td><div class="result-list-icons admin-icon-approve">Approve</div></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>Archive / GDF project</td>
+						<td>first studies</td>
+						<td>Invoices</td>
+						<td>05/25/2016 by S. Sorakayala</td>
+                        <td><div class="result-list-icons admin-icon-approve">Approve</div></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>Template for marketing letter</td>
+						<td>WIP : for internal use only</td>
+						<td>Internal documents</td>
+						<td>04/28/2016 by D. Lee</td>
+                        <td><div class="result-list-icons admin-icon-approve">Approve</div></td>
+					</tr>
+				</table>
+			</div>
+			<div class="result-list-facet result-list-facet-collapsed">
+				<h2>Active filter</h2>
+				<ul class="facet-filters">
+					<li>Record type : Invoices</li>
+					<li>Client : GDF</li>
+				</ul>
+				<h2>Clients</h2>
+				<div id="chartContainerClients" style="width: 100%; height: 300px"></div>
+				<h2>Records per year</h2>
+				<div id="chartContainerProjects" style="width: 100%; height: 300px"></div>
+				<h2>Records per language</h2>
+				<div id="chartContainerLanguage" style="width: 100%; height: 300px"></div>
+			</div>
+			<div class="context-menu-tools">
+				<div class="context-menu-icon admin-icon-approve">Approve all</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="js/jquery-3.0.0.min.js"></script>
+   	<script src="js/tooltipster.bundle.min.js"></script>
+	<script src="js/everteam.records.js"></script>
+	<script src="js/jquery.canvasjs.min.js"></script>
+	<script>
+		window.onload = function() {
+			$("#chartContainerClients").CanvasJSChart({
+				axisY: {
+					title: "Products in %"
+				},
+				legend :{
+					verticalAlign: "center",
+					horizontalAlign: "right"
+				},
+				data: [
+				{
+					type: "pie",
+					showInLegend: true,
+					toolTipContent: "{label} <br/> {y} %",
+					indexLabel: "{y} %",
+					dataPoints: [
+						{ label: "GDF",  y: 30.3, legendText: "GDF"},
+						{ label: "Airbus",    y: 19.1, legendText: "Airbus"  },
+						{ label: "Orange",   y: 4.0,  legendText: "Orange" },
+						{ label: "LG",       y: 3.8,  legendText: "LG Electronics"},
+						{ label: "Lenovo",   y: 3.2,  legendText: "Lenovo" },
+						{ label: "Others",   y: 39.6, legendText: "Others" }
+					]
+				}
+				]
+			});
+
+			$("#chartContainerProjects").CanvasJSChart({
+				axisY: {
+					title: "",
+					suffix: "",
+					includeZero: false
+				},
+				data: [
+				{
+					type: "column",
+					toolTipContent: "{label}: {y}%",
+					dataPoints: [
+						{ label: 2003, y: 5.4 },
+						{ label: 2004, y: 5.1 },
+						{ label: 2005, y: 5.2 },
+						{ label: 2006, y: 5.0 },
+						{ label: 2007, y: 4.8 },
+						{ label: 2008, y: 4.9 },
+						{ label: 2009, y: 5.4 },
+						{ label: 2010, y: 5.3 },
+						{ label: 2011, y: 5.7 },
+						{ label: 2012, y: 7.7 },
+						{ label: 2013, y: 7.8 },
+						{ label: 2014, y: 8.1 },
+						{ label: 2015, y: 7.9 },
+						{ label: 2016, y: 7.6 }
+					]
+				}
+				]
+			});
+
+			$("#chartContainerLanguage").CanvasJSChart({
+				data: [
+				{
+					type: "doughnut",
+					indexLabel: "{label}: {y}%",
+					toolTipContent: "{label}: {y}%",
+					dataPoints: [
+						{ label: "English",     y: 58},
+						{ label: "German",      y: 7},
+						{ label: "French",		y: 21},
+						{ label: "Arabic",      y: 3},
+						{ label: "Other (3 languages)",y: 11}
+					]
+				}
+				]
+			});
+
+		}
+	</script>
+
+	</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/everteam.records.css" />
+	<title>everteam.records</title>
+</head>
+
+<body>
+    <!-- Modal Window -->
+    <div class="modal-container cmis-connections-modal-create">
+        <div>
+            <h1>Create a new connection</h1>
+            <div>
+                <span>Name:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Protocol:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Username:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Password:</span><span><input type="password" value=""></span>
+            </div>
+            <div>
+                <span>URL:</span><span><input type="text" value=""></span>
+            </div>
+            <div>
+                <span>Authentication:</span>
+                <span class="checkbox-container">
+                    <span class="radio radio-on">None</span>
+                    <span class="radio">Standard</span>
+                    <span class="radio">NTLM</span>
+                </span>
+            </div>
+            <div>
+                <span class="button-container">
+                    <input type="button" value="Test" class="button-record-type navigate" />
+                    <input type="button" value="Create" class="button-record-type navigate" cspage="cmisConnections.html" />
+                    <input type="button" value="Back" class="button-cancel navigate" cspage="cmisConnections.html" />
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-background navigate" cspage="cmisConnections.html"><span>Close</span></div>
+
+	<div class="screen">
+	  <nav>
+
+		<div class="toggle">
+			<span>Menu</span>
+			<div>Menu</div>
+		</div>
+		<div class="logo"><span>everteam</span><br/>.governance</div>
+
+		<!-- Seach for anything -->
+		<div class="analyticssearch">
+			<input type="text" value="Search for anything"/><div></div>
+		</div>
+
+		<!-- My Profile -->
+		<div class="avatar noselect">
+			<span></span>
+			<div>
+				<b>Abdullah Daoud</b><br/>
+				Human Ressources
+			</div>
+		</div>
+		<div class="avatar-menu noselect">
+			<span></span>
+			<div>Abdullah Daoud</div>
+			<ul class="avatar-menu-main">
+				<li>a.daoud@everteam.com<br/><br/></li>
+				<li class="navigate switch-department-link"><a>Switch Department</a></li>
+				<li cspage="profile.html" class="navigate"><a>My Profile</a></li>
+				<li><a>Disconnect</a></li>
+			</ul>
+			<div class="switch-department">
+				<ul>
+					<li><a href="#">Human Ressources</a></li>
+					<li><a href="#">Marketing</a></li>
+					<li><a href="#">Financial</a></li>
+					<li><a href="#">R&D</a></li>
+					<li><a href="#">Development</a></li>
+					<li><a href="#">Sell</a></li>
+					<li><a href="#">Support</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+	  </nav>
+
+		<!-- Admin Menus -->
+		<div class="cmis-menus-container">
+			<div class="cmis-menus-connections-active active navigate noselect" cspage="">CMIS Connections</div>
+			<div class="cmis-menus-jobs navigate noselect" cspage="jobManagement.html">Job Management</div>
+			<div class="cmis-menus-query navigate noselect" cspage="queryBuilder.html">Query Builder</div>
+		</div>
+
+		<!-- + button -->
+		<div class="button-plus-container noselect button-plus-cmis-connections">
+			<div>+</div>
+		</div>
+
+		<div class="menu-container">
+		  <ul class="menu visually-hidden noselect">
+			<li cspage="main.html" class="navigate"><a>Search</a></li>
+			<li><span></span></li>
+			<li cspage="dashboard.html" class="navigate"><a>Dashboard</a></li>
+			<li><span></span></li>
+			<li cspage="cmisConnections.html" class="navigate"><a>CMIS Configuration</a></li>
+			<li><span></span></li>
+			<li cspage="administration.html" class="navigate"><a>Administration</a></li>
+			<li><span></span></li>
+			<li cspage="userConfiguration.html" class="navigate"><a>User configuration</a></li>
+		  </ul>
+		</div>
+
+		<div class="main-container">
+			<div class="cmis-connections-inner-container">
+                <h1>CMIS Connections</h1>
+				<div class="result-count">2 results</div>
+				<div class="result-pages">1 page</div>
+    			<div class="result-list-table result-list-table-expanded destructed-records-table-list cmis-connections-table">
+    				<table cellpadding="2" cellspacing="10" border="0" width="100%">
+    					<tr>
+    						<th></th>
+    						<th>Name</th>
+    						<th>Source</th>
+    						<th>Destination</th>
+    						<th>Protocol</th>
+    						<th></th>
+    					</tr>
+    					<tr>
+    						<td class="cmis-list-icons">
+                                <img src="img/icon_list_edit.png">
+                                <img src="img/icon_list_delete.png">
+                                <img src="img/icon_list_copy.png">
+                            </td>
+    						<td>US Human Ressource DataBase</td>
+    						<td>Alfresco</td>
+    						<td>Eversuite</td>
+    						<td>CMIS</td>
+    						<td><input type="button" value="Browse repository" class="navigate" cspage="browserLogin.html"/></td>
+    					</tr>
+    					<tr>
+    						<td class="cmis-list-icons">
+                                <img src="img/icon_list_edit.png">
+                                <img src="img/icon_list_delete.png">
+                                <img src="img/icon_list_copy.png">
+                            </td>
+    						<td>Connection to Europe Workflow</td>
+    						<td>Sharepoint</td>
+    						<td>Eversuite</td>
+    						<td>Eversuite</td>
+    						<td><input type="button" value="Browse repository" class="navigate" cspage="browserLogin.html" /></td>
+    					</tr>
+    				</table>
+    			</div>
+    		</div>
+        </div>
+	</div>
+	<script src="js/jquery-3.0.0.min.js"></script>
+   	<script src="js/tooltipster.bundle.min.js"></script>
+	<script src="js/everteam.records.js"></script>
+</body>
+</html>
